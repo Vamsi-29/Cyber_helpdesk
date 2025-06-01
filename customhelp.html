@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Need Custom Help?</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+  <div class="min-h-screen flex items-center justify-center px-4">
+    <div class="bg-white rounded-2xl shadow-xl max-w-xl w-full p-8 text-center animate-fade-in">
+      <h1 class="text-2xl font-bold text-indigo-600 mb-2">📨 Need Custom Help?</h1>
+      <p class="text-gray-600 mb-6">Can't find what you're looking for? Submit your issue below.</p>
+
+      <form action="https://formspree.io/f/yourFormID" method="POST" class="space-y-4 text-left">
+        <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 border rounded-lg" />
+        <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 border rounded-lg" />
+        <textarea name="message" placeholder="Describe your issue..." rows="5" required class="w-full p-3 border rounded-lg"></textarea>
+        <button type="submit" class="w-full bg-indigo-600 text-white py-3 rounded-lg hover:bg-indigo-700 transition">Submit</button>
+      </form>
+
+      <div class="mt-6">
+        <a href="index.html" class="text-indigo-600 hover:underline text-sm">← Back to Help Desk</a>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    @keyframes fade-in {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in {
+      animation: fade-in 0.6s ease-out;
+    }
+  </style>
+</body>
+</html>
